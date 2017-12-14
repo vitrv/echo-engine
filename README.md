@@ -4,3 +4,5 @@ This project uses Bidirectional Path Tracing and Acoustic Transport equations to
 
 This system adds the "tracer.cs" script, which runs an acoustic transport algorithm, and hooks into Unity's default audio component to modify its behavior. This script should be added to any AudioSource that needs to be more realistically handled. A demo project can be run by opening Assets/a.unity
 
+Currently, only dynamic volume is implemented, though the path tracing technique would also allow for dynamic reverb and stereo pan. 
+
