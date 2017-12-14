@@ -44,7 +44,7 @@ public class tracer : MonoBehaviour {
 					r.origin = transform.position;
 					r.direction = new Vector3(x, y, z);
 
-					pathtrace(r, bounces, 0);
+					pathtrace(r, bounces, 18);
 				}
 			}
 		}
@@ -74,7 +74,7 @@ public class tracer : MonoBehaviour {
 		RaycastHit hit;
         if (Physics.Raycast(path, out hit, dir.magnitude)) {
         	if(hit.collider.gameObject.name.Equals("Player")){
-        		volume += 1/((float)Math.Sqrt(res) * dist * dist);
+        		volume += 1/(20 * (float)Math.Sqrt(res *dist) + dist);
         	}
 
         }
